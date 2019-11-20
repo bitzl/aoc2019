@@ -1,0 +1,27 @@
+num_gpus: 1
+minibatch_base: 4
+train_total_kimg: 25000 # <-- necessary? or part of resolution levels?
+
+dataset: datasets/cats_and_dogs
+
+initial:
+  height: 4
+  width: 4
+
+resolutions:
+  - ticks: 12
+    kimg_per_tick: 600
+    ticks_per_checkpoint: 10
+    minibatch_size: 128
+
+  - ticks: 12
+    kimg_per_tick: 600
+    ticks_per_checkpoint: 10
+    minibatch_size: 128
+
+
+
+
+#desc += '-1gpu'; submit_config.num_gpus = 1; sched.minibatch_base = 4;
+# sched.minibatch_dict = {4: 128, 8: 128, 16: 128, 32: 64, 64: 32, 128: 16, 256: 8, 512: 4};
+# sched.G_lrate_dict = {1024: 0.0015}; sched.D_lrate_dict = EasyDict(sched.G_lrate_dict); train.total_kimg = 12000

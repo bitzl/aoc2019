@@ -1,0 +1,8 @@
+click
+tqdm
+numpy
+scipy
+matplotlib
+requests
+pyyaml
+tensorflow
