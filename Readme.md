@@ -14,8 +14,9 @@ $ python main.py init /path/to/project
 ```
 
 2. Edit your config (e.g. where's your training data?):
-``sh
+```sh
 $ editor /path/to/project/config.yml 
+```
 
 3. Start (or resume) training:
 ```sh
